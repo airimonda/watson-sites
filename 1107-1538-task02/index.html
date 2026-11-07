@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aileen Baldon Nunez — Personal Website</title>
+<meta name="description" content="The personal website of Aileen Baldon Nunez — who she is, what she loves, and how to say hello.">
+<style>
+  :root{
+    --bg:#faf6f0;
+    --ink:#211d18;
+    --muted:#6f675c;
+    --accent:#b0533c;
+    --accent-soft:#f3e2da;
+    --card:#ffffff;
+    --line:#e8dfd3;
+    --shadow:0 10px 30px rgba(60,40,20,.08);
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#161310;
+      --ink:#ede7dd;
+      --muted:#a89d8d;
+      --accent:#e5906f;
+      --accent-soft:#2b211b;
+      --card:#1e1a15;
+      --line:#2e2921;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important;animation:none!important}
+  }
+  body{
+    margin:0;
+    font:17px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb,var(--bg) 88%,transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .mono{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:42px;height:42px;border-radius:50%;
+    background:var(--accent);color:#fff;font-weight:700;letter-spacing:.5px;
+  }
+  nav a{color:var(--ink);font-size:15px;margin-left:20px}
+  nav a:hover{color:var(--accent);text-decoration:none}
+  @media (max-width:520px){nav a{margin-left:12px}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:84px 0 70px;text-align:center}
+  .hero .mono{width:96px;height:96px;font-size:30px;box-shadow:var(--shadow)}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.4rem);margin:26px 0 8px}
+  .hero .tag{font-size:1.15rem;color:var(--muted);max-width:34em;margin:0 auto}
+  .hero .cta{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:999px;
+    font-weight:600;font-size:15px;border:1px solid var(--line);
+    color:var(--ink);background:var(--card);box-shadow:var(--shadow);
+    transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);text-decoration:none}
+  .btn.primary{background:var(--accent);border-color:transparent;color:#fff}
+  .rule{
+    width:64px;height:3px;background:var(--accent);
+    border-radius:2px;margin:26px auto 0;
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  section h2{font-size:1.9rem;margin-bottom:6px}
+  .kicker{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .lead{color:var(--muted);margin:10px 0 0;max-width:38em}
+
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:34px}
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
+  }
+  .card .ico{font-size:26px}
+  .card h3{font-size:1.1rem;margin:10px 0 4px}
+  .card p{margin:0;color:var(--muted);font-size:.95rem}
+
+  .quote{
+    margin:40px auto 0;max-width:36em;text-align:center;
+    font-family:"Iowan Old Style",Georgia,serif;font-style:italic;
+    font-size:1.2rem;color:var(--muted);
+  }
+
+  /* ---------- contact ---------- */
+  .contact{ text-align:center }
+  .contact .lead{margin-left:auto;margin-right:auto}
+  .contact .cta{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+  footer{
+    border-top:1px solid var(--line);padding:28px 0 44px;
+    text-align:center;color:var(--muted);font-size:.9rem;
+  }
+  footer .heart{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <span class="mono" aria-hidden="true">ABN</span>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#loves">Things I love</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="mono" aria-hidden="true">ABN</span>
+      <h1>Aileen Baldon Nunez</h1>
+      <p class="tag">Welcome to my little corner of the web — a place for the people, places, and simple joys that make life good.</p>
+      <div class="cta">
+        <a class="btn primary" href="#about">Get to know me</a>
+        <a class="btn" href="#contact">Say hello</a>
+      </div>
+      <div class="rule" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <span class="kicker">About</span>
+      <h2>Hi, I’m Aileen</h2>
+      <p class="lead">
+        I’m someone who finds happiness in the everyday — a good meal shared with family,
+        a conversation that runs long past dinner, and the quiet satisfaction of learning
+        something new. This site is a small window into the things that matter to me.
+      </p>
+      <div class="facts">
+        <div class="card">
+          <div class="ico" aria-hidden="true">🏡</div>
+          <h3>Home first</h3>
+          <p>Family and close friends are the center of everything. The best days are the simple ones.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🌱</div>
+          <h3>Always learning</h3>
+          <p>Curious by nature — new ideas, new skills, and new stories keep life interesting.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">✨</div>
+          <h3>Small joys</h3>
+          <p>I believe the little moments, noticed and appreciated, are what make a life well lived.</p>
+        </div>
+      </div>
+      <p class="quote">“Collect moments, not things — the people we love and the memories we make are the true treasures.”</p>
+    </div>
+  </section>
+
+  <!-- THINGS I LOVE -->
+  <section id="loves">
+    <div class="wrap">
+      <span class="kicker">Things I love</span>
+      <h2>What fills my days</h2>
+      <p class="lead">A few of the things that make me smile.</p>
+      <div class="facts">
+        <div class="card">
+          <div class="ico" aria-hidden="true">🍽️</div>
+          <h3>Good food</h3>
+          <p>Home cooking, shared plates, and recipes that taste like childhood.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🧳</div>
+          <h3>Travel &amp; places</h3>
+          <p>New towns, familiar beaches, and the excitement of somewhere not yet seen.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🎶</div>
+          <h3>Music &amp; stories</h3>
+          <p>A great playlist, a great book, and stories worth retelling.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">🌺</div>
+          <h3>Gardens &amp; green</h3>
+          <p>Flowers on the table, plants on the windowsill, time outdoors.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">☕</div>
+          <h3>Slow mornings</h3>
+          <p>Warm coffee, soft light, and an unhurried start to the day.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">💌</div>
+          <h3>Keeping in touch</h3>
+          <p>Long calls, handwritten notes, and showing up for the people I love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <span class="kicker">Contact</span>
+      <h2>Say hello</h2>
+      <p class="lead">
+        I’d love to hear from you — whether it’s a hello, a shared memory, or a recipe worth passing on.
+      </p>
+      <div class="cta">
+        <!-- Edit: replace with your real email address -->
+        <a class="btn primary" href="mailto:hello@example.com">✉️ Email me</a>
+        <a class="btn" href="#about">Back to top</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="yr">2026</span> Aileen Baldon Nunez · Made with <span class="heart">♥</span> and a simple page of HTML &amp; CSS</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
